@@ -1,0 +1,29 @@
+<h1>Goku</h1>
+<dl>
+  <td>Nombre: {{ nombre }}</td>
+  <dd></dd>
+
+  <td>Edad: {{ edad }}</td>
+  <dd></dd>
+
+  <td>Método: {{ getDescriptionHeroe() }}</td>
+  <dd></dd>
+
+  <td>Capitalizado: {{ nombreCapitalizado }}</td>
+  <dd></dd>
+
+  <button *ngIf="nombre === 'Son Goku'" class="btn btn-primary" (click)="cambiarNombre()">
+    Cambiar nombre
+  </button>
+
+  @if (edad === 32) {
+    <button class="btn btn-primary" (click)="cambiarEdad()">
+      Cambiar edad
+    </button>
+  }
+
+  <button class="btn btn-primary" (click)="restablecerDatos()">
+    Restablecer
+  </button>
+
+</dl>

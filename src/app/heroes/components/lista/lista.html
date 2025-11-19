@@ -1,0 +1,29 @@
+<h3>Lista de héroes</h3>
+
+<button class="btn btn-outline-danger" (click)="eliminarUltimoHeroe()">Borrar último héroe</button>
+
+@if (heroeEliminado) {
+  <h3>Héroe eliminado <small class="text-danger">{{ heroeEliminado }}</small></h3>
+} @else {
+  <h3>No ha eliminado ningún héroe</h3>
+}
+
+  <!-- <h3 *ngIf="heroeEliminado; else nadaQueBorrar" >Héroe eliminado <small class="text-danger">{{ heroeEliminado }}</small></h3>
+
+  <ng-template #nadaQueBorrar>
+    <h3>No ha eliminado ningún héroe</h3>
+  </ng-template> -->
+
+<ul class="mt-2 list-group">
+  <!-- <li class="list-group-item">Goku</li>
+  <li class="list-group-item">Vegeta</li>
+  <li class="list-group-item">Piccolo</li>
+  <li class="list-group-item">Bu</li> -->
+  <li *ngFor="let nombre of nombreHeroes" class="list-group-item">{{ nombre }}</li>
+</ul>
+
+<!-- <ul class="mt-2 list-group">
+  @for (nombre of nombreHeroes; track nombre) {
+    <li class="list-group-item">{{ nombre }}</li>
+  }
+</ul> -->
