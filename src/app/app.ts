@@ -2,13 +2,14 @@ import { Component, signal } from '@angular/core';
 
 import { ContadorModule } from './contador/contador.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz-module';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [ContadorModule, HeroesModule]
+  imports: [ContadorModule, HeroesModule, DbzModule]
 })
 export class App {
     protected readonly title = signal('02-bases-angular jajajajaj');
